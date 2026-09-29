@@ -1,0 +1,12 @@
+{
+  "language": "en",
+  "categories": {
+    "people": ["grandma", "teacher", "student", "artist", "scientist", "traveler", "chef", "detective", "sailor", "farmer", "baby", "brother", "astronaut", "musician", "stranger"],
+    "animals": ["cat", "dog", "panda", "dinosaur", "penguin", "owl", "octopus", "hamster", "frog", "dolphin", "crow", "turtle", "giraffe", "fox", "sheep"],
+    "food": ["banana", "noodles", "curry", "pizza", "refrigerator", "bread", "dumpling", "pudding", "cheese", "apple", "coffee", "barbecue", "ice cream", "sandwich", "lemon"],
+    "places": ["Tokyo", "parliament", "school", "station", "beach", "temple", "library", "basement", "airport", "rooftop", "desert", "market", "mountain", "island", "factory"],
+    "actions": ["running", "singing", "building", "searching", "breaking", "flying", "laughing", "sleeping", "fighting", "dancing", "experiment", "travel", "challenge", "cooking", "unboxing"],
+    "abstract": ["hope", "secret", "future", "accident", "miracle", "chaos", "memory", "freedom", "silence", "friendship", "failure", "discovery", "limit", "dream", "mystery"],
+    "internet": ["gameplay", "stream", "test", "prank", "review", "meme", "ranking", "tutorial", "timelapse", "ASMR", "live", "highlights", "battle", "compilation", "explained"]
+  }
+}

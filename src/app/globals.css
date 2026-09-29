@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root { color-scheme: dark; --bg:#090a0f; --panel:#12141c; --line:#292c39; --text:#f6f6f8; --muted:#8d91a2; --accent:#ff3158; --cyan:#5ff4d7; }
+* { box-sizing:border-box; }
+html,body { margin:0; min-height:100%; background:var(--bg); color:var(--text); font-family:Inter,system-ui,sans-serif; }
+body { background-image:radial-gradient(circle at 50% 0%,rgba(255,49,88,.11),transparent 34%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px); background-size:auto,42px 42px,42px 42px; }
+button,input,select { font:inherit; }
+button { cursor:pointer; }
+button:disabled { cursor:not-allowed; opacity:.45; }
+.shell { width:min(1160px,calc(100% - 32px)); margin:0 auto; min-height:100vh; }
+.panel { background:linear-gradient(145deg,rgba(23,25,35,.97),rgba(14,15,22,.97)); border:1px solid var(--line); box-shadow:0 24px 80px rgba(0,0,0,.25); border-radius:18px; }
+.eyebrow { font:700 11px Space Mono,monospace; letter-spacing:.28em; color:var(--accent); }
+.muted { color:var(--muted); }
+input,select { color:var(--text); background:#0c0e14; border:1px solid #343746; border-radius:9px; outline:none; transition:.2s; }
+input:focus,select:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(255,49,88,.12); }
+button { border:1px solid #383b49; border-radius:9px; background:#1a1c25; color:var(--text); padding:12px 18px; font-weight:800; }
+.primary { border:0; background:var(--accent); color:white; box-shadow:0 10px 26px rgba(255,49,88,.23); }
+.primary:hover { background:#ff496b; transform:translateY(-1px); }
+.ghost { background:transparent; padding:8px 13px; color:var(--muted); }
+.error { color:#ff718c; font-size:13px; margin-bottom:0; }
+.topbar { height:74px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.miniBrand { font:800 13px Space Mono,monospace; letter-spacing:.08em; }
+
+.home { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:50px 0; }
+.brandMark { display:grid; place-items:center; width:52px; height:52px; border:1px solid var(--accent); color:var(--accent); transform:rotate(45deg); margin-bottom:18px; font-size:18px; }
+.brandMark::first-line { transform:rotate(-45deg); }
+.home h1 { font-size:clamp(62px,10vw,112px); line-height:.78; margin:12px 0 28px; letter-spacing:-.075em; font-weight:900; }
+.home h1 span { color:transparent; -webkit-text-stroke:1.5px var(--text); }
+.tagline { color:#b5b7c1; margin:0 0 32px; }
+.joinCard { width:min(460px,100%); padding:26px; text-align:left; }
+.joinCard label { display:block; font:700 10px Space Mono,monospace; color:var(--muted); letter-spacing:.14em; margin-bottom:9px; }
+.joinCard>input { width:100%; padding:15px; }
+.joinCard>.primary { width:100%; margin-top:12px; padding:15px; }
+.or { display:flex; align-items:center; gap:12px; color:#666a78; font-size:11px; margin:20px 0; }
+.or::before,.or::after { content:""; height:1px; background:var(--line); flex:1; }
+.joinRow { display:flex; gap:9px; }
+.joinRow input { flex:1; min-width:0; padding:13px; }
+.codeInput { text-transform:uppercase; font:700 16px Space Mono,monospace; letter-spacing:.15em; }
+.footerNote { font:400 9px Space Mono,monospace; letter-spacing:.25em; color:#565965; margin-top:30px; }
+
+.roomHero { text-align:center; padding:48px 0 38px; }
+.roomCode { display:block; margin:5px auto; border:0; background:none; padding:0; font:800 clamp(45px,8vw,76px) Space Mono,monospace; letter-spacing:.16em; color:var(--text); }
+.roomHero .muted { font-size:12px; }
+.lobbyGrid { display:grid; grid-template-columns:.8fr 1.2fr; gap:18px; }
+.lobbyGrid>.panel { padding:25px; }
+.sectionTitle { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); padding-bottom:15px; margin-bottom:15px; }
+.sectionTitle h2 { margin:0; font:800 13px Space Mono,monospace; letter-spacing:.1em; }
+.sectionTitle span { font-size:11px; color:var(--muted); }
+.player { display:flex; align-items:center; gap:12px; padding:12px 5px; border-bottom:1px solid #20222c; }
+.player small { margin-left:auto; font:700 9px Space Mono,monospace; color:var(--accent); border:1px solid rgba(255,49,88,.35); padding:4px 7px; }
+.presence { width:8px; height:8px; border-radius:50%; background:#555; }.presence.online { background:var(--cyan); box-shadow:0 0 10px var(--cyan); }
+.setting { display:grid; grid-template-columns:1fr 210px; align-items:center; padding:9px 0; }.setting label,.settingBlock>label { color:#c1c3cc; font-size:13px; }.setting select { padding:10px; }
+.settingBlock { margin-top:12px; }.difficulty { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:10px; }.difficulty button { padding:10px 4px; font:700 10px Space Mono,monospace; }.difficulty .active { color:white; border-color:var(--accent); background:rgba(255,49,88,.18); }
+.start { display:block; width:min(420px,100%); margin:27px auto; font-size:16px; padding:17px; }.start span { float:right; }.waiting { text-align:center; color:var(--muted); margin:34px; }.dots { color:var(--accent); letter-spacing:.3em; margin-left:10px; }
+.lobbyError { text-align:center; margin:18px auto 0; max-width:760px; }
+
+.countdown { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:radial-gradient(circle,rgba(255,49,88,.18),transparent 35%); }.countdown p,.countdown span { font:700 12px Space Mono,monospace; letter-spacing:.3em; color:var(--muted); }.countdown div { font-size:clamp(130px,28vw,320px); font-weight:900; line-height:1; color:var(--accent); animation:pop .45s ease-out; text-shadow:0 0 90px rgba(255,49,88,.3); }@keyframes pop { from { opacity:0; transform:scale(1.35); } }
+.game { padding-bottom:35px; }.gameHeader { height:78px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; border-bottom:1px solid var(--line); }.gameHeader>div:first-child span { display:block; font:700 9px Space Mono,monospace; color:var(--muted); letter-spacing:.2em; }.gameHeader>div:first-child strong { font-size:22px; }.gameHeader i { font-style:normal; color:var(--muted); font-weight:400; }.timer { font:700 30px Space Mono,monospace; letter-spacing:.05em; }.timer.danger { color:var(--accent); }.roomMini { text-align:right; font:700 10px Space Mono,monospace; color:var(--muted); }
+.thumbnailFrame { width:min(930px,100%); aspect-ratio:16/9; margin:28px auto 20px; padding:7px; background:#050609; border:1px solid #333643; box-shadow:0 30px 90px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.02); border-radius:12px; overflow:hidden; }.thumbnailFrame img { width:100%; height:100%; display:block; object-fit:contain; background:#000; border-radius:7px; }
+.answerArea { width:min(760px,100%); margin:auto; text-align:center; }.answerArea>p { font-weight:800; font-size:18px; }.answerRow { display:flex; gap:9px; }.answerRow input { flex:1; min-width:0; padding:16px; font-size:16px; }.answerRow button { width:110px; }.feedback { color:var(--accent); min-height:24px; font-weight:800; padding-top:7px; }
+.playersStrip { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin-top:15px; }.playerChip { min-width:125px; padding:9px 13px; border:1px solid var(--line); background:#11131a; border-radius:8px; }.playerChip.me { border-color:#55596b; }.playerChip span,.playerChip small { display:block; }.playerChip span { font-size:12px; font-weight:700; }.playerChip small { color:var(--muted); font:400 8px Space Mono,monospace; margin-top:3px; }
+
+.result { padding-bottom:40px; }.resultKicker { font-size:clamp(22px,4vw,38px); font-weight:800; text-align:center; margin:35px 0; }.resultKicker strong { color:var(--accent); }.resultGrid { display:grid; grid-template-columns:1.5fr .8fr; gap:24px; align-items:start; }.resultThumb { aspect-ratio:16/9; background:#000; border:1px solid var(--line); border-radius:12px; overflow:hidden; }.resultThumb img { width:100%; height:100%; object-fit:contain; }.answerTitle { font-size:clamp(24px,4vw,42px); line-height:1.16; margin:20px 0 8px; }.channel { color:var(--muted); }.youtube { display:inline-block; color:white; background:#e62117; padding:11px 16px; border-radius:8px; text-decoration:none; font-weight:800; font-size:13px; }.ranking { padding:22px; }.ranking h2 { font:800 13px Space Mono,monospace; letter-spacing:.15em; }.rank { display:grid; grid-template-columns:32px 1fr auto; gap:8px; padding:14px 0; border-top:1px solid var(--line); align-items:center; }.rank>b { color:var(--muted); font:700 12px Space Mono,monospace; }.rank strong { color:var(--cyan); font:700 12px Space Mono,monospace; }.nextRound { text-align:center; color:var(--muted); font-size:12px; margin-top:28px; }
+.final { text-align:center; padding:65px 0; }.final h1 { margin:8px 0 0; font-size:clamp(64px,11vw,130px); line-height:.85; color:transparent; -webkit-text-stroke:1px var(--accent); }.winnerName { font-size:clamp(45px,8vw,90px); font-weight:900; color:var(--accent); margin:8px 0 38px; text-transform:uppercase; }.podium { text-align:left; margin:0 auto 25px; max-width:900px; padding:10px 24px; }.finalRow { display:grid; grid-template-columns:40px 1.5fr repeat(3,1fr) 1fr; align-items:center; gap:10px; padding:18px 0; border-bottom:1px solid var(--line); }.finalRow:last-child { border:0; }.finalRow>b { font:700 18px Space Mono,monospace; color:var(--muted); }.finalRow span { font:700 12px Space Mono,monospace; }.finalRow small { display:block; font:400 8px Inter,sans-serif; color:var(--muted); margin-bottom:3px; }.finalRow em { text-align:right; color:var(--cyan); font:700 15px Space Mono,monospace; }
+
+@media (max-width:700px) { .shell{width:min(100% - 22px,1160px)}.lobbyGrid,.resultGrid{grid-template-columns:1fr}.roomHero{padding:30px 0 22px}.roomCode{letter-spacing:.08em}.setting{grid-template-columns:1fr 145px}.difficulty{grid-template-columns:repeat(2,1fr)}.gameHeader{height:64px}.thumbnailFrame{margin-top:16px}.roomMini{font-size:8px}.answerRow button{width:82px;padding:10px}.finalRow{grid-template-columns:30px 1fr auto}.finalRow span{display:none}.finalRow em{font-size:12px}.resultGrid .ranking{order:2}.home h1{font-size:68px}.joinCard{padding:19px} }

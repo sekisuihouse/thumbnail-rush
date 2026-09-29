@@ -2,6 +2,12 @@
 
 YouTube の公式サムネイルだけを見て元動画のタイトルを探し、最初に当てた人が得点するリアルタイム早押しゲームです。6桁のコードを共有するだけで、PC・スマートフォンから同じルームに参加できます。
 
+## オンラインで遊ぶ
+
+<https://thumbnail-rush-production.up.railway.app>
+
+ホストがルームを作り、表示された6桁コードを参加者へ共有してください。
+
 ## 実装機能
 
 - ルーム作成・6桁コード参加・ホスト権限・再接続
@@ -42,7 +48,7 @@ Socket.IO + 常駐 Node.js を選んだ理由は、数人〜数十人の低遅�
 ## インストールとローカル起動
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/sekisuihouse/thumbnail-rush.git
 cd thumbnail-rush
 npm install
 cp .env.example .env.local
@@ -139,7 +145,7 @@ RenderやFly.ioでもDockerfileをそのまま利用できます。WebSocket対�
 
 ## 技術構成
 
-- Next.js 15 / React 19 / TypeScript strict
+- Next.js 16 / React 19 / TypeScript strict
 - Socket.IO 4（WebSocket + polling fallback）
 - カスタムNode HTTPサーバー
 - Vitest
